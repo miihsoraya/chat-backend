@@ -13,6 +13,7 @@ const io = socketio(server);
 
 app.use(cors());
 app.use(router);
+app.listen(3000)
 
 io.on('connect', (socket) => {
   socket.on('join', ({ name, room }, callback) => {
